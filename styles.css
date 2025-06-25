@@ -88,7 +88,26 @@ footer {
     max-width: none;
     align-items: center;
   }
+
+
+  .cyan::before {
+    background: var(--color-cyan);
+  }
+
+  .red::before {
+    background: var(--color-red);
+  }
+
+  .orange::before {
+    background: var(--color-orange);
+  }
+
+  .blue::before {
+    background: var(--color-blue);
+  }
+
   
+
   @media (min-width: 1024px) {
   .card:nth-child(1) {
     grid-column: 1;
