@@ -21,6 +21,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    border:dotted red 2px;
 }
 
 main {
@@ -88,6 +89,7 @@ footer {
     margin: 25px;
 }
 
+/* mobile-fiurst display */
 .cards {
     display: grid;
     gap: 1.875rem;
@@ -113,14 +115,6 @@ footer {
   }
 
 
-  .cards {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    max-width: none;
-    align-items: center;
-  }
-
-
   .cyan::before {
     background: var(--color-cyan);
   }
@@ -137,9 +131,28 @@ footer {
     background: var(--color-blue);
   }
 
+  /* ipad display */
+  @media (min-width: 768px) {
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 540px;
+      margin: 0 auto;
+    }
+  }
 
-
+  /* pc display*/
   @media (min-width: 1024px) {
+    .hero {
+        margin-bottom: 5rem;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,1fr);
+        max-width: none;
+        align-items: center;
+    }
+
   .card:nth-child(1) {
     grid-column: 1;
     grid-row: 2 / 4;
